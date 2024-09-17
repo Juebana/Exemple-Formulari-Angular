@@ -1,0 +1,36 @@
+<h1>Registre Usuari</h1>
+
+<label>
+    Usuari:
+    <input type="text" [(ngModel)]="nom" name="username" required>
+</label>
+
+<label>
+    Email:
+    <input type="email" [(ngModel)]="email" name="email" required>
+</label>
+
+<label>
+    Contrasenya:
+    <input type="password" [(ngModel)]="password" name="password" required>
+</label>
+
+<label>
+    Confirmar contrasenya:
+    <input type="password" [(ngModel)]="repeatpassword" name="confirmPassword" required>
+</label>
+
+<label for="idioma">
+    Idioma:
+    <select [(ngModel)]="idioma" name="idioma" required>
+      <option *ngFor="let idioma of idiomes" [value]="idioma.value">{{ idioma.label }}</option>
+    </select>
+</label>
+
+<label>
+    Terms and Conditions:
+    <input type="checkbox" [(ngModel)]="terms" name="terms" required>
+    Accepto els termes i condicions.
+</label>
+
+<button (click)="submit()">Enviar</button>
